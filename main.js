@@ -27,3 +27,4 @@ window.onload = function () {
         light = false;
     }
 }
+
