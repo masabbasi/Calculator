@@ -61,6 +61,15 @@ document.querySelector(".clear").addEventListener("click",function(){
     mainResult.innerHTML=0;
 })
 
+document.querySelector(".clear-last").addEventListener("click",function(){
+    let text = allKeyResult.innerHTML;
+    if (text.length===1) {
+        allKeyResult.innerHTML=0;
+    } else {
+        allKeyResult.innerHTML = text.substring(0, text.length-1)
+    }
+})
+
 document.querySelector(".equals").addEventListener("click",function () {
     const myResult = allKeyResult.innerHTML;
     mainResult.innerHTML=eval(myResult);
