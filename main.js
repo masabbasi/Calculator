@@ -28,3 +28,40 @@ window.onload = function () {
     }
 }
 
+let allKeyResult = document.querySelector(".calc-all-keydown")
+const mainResult = document.querySelector(".calc-main-result")
+const allKey = document.querySelectorAll(".show-in-result")
+
+function showResult (event) {
+    let x = event.target.innerHTML;
+    if (allKeyResult.innerHTML == 0) {
+        allKeyResult.innerHTML = x;
+    } else {
+        allKeyResult.innerHTML += x;
+    }
+}
+
+allKey.forEach(function(item){
+    item.addEventListener("click",showResult)
+})
+
+let pOrM = true;
+document.querySelector(".p-or-m").addEventListener("click",function(){
+    if (pOrM===false) {
+        allKeyResult.innerHTML="+"+allKeyResult.innerHTML;
+        pOrM=true;
+    } else {
+        allKeyResult.innerHTML="-"+allKeyResult.innerHTML;
+        pOrM=false;
+    }
+})
+
+document.querySelector(".clear").addEventListener("click",function(){
+    allKeyResult.innerHTML=0;
+    mainResult.innerHTML=0;
+})
+
+document.querySelector(".equals").addEventListener("click",function () {
+    const myResult = allKeyResult.innerHTML;
+    mainResult.innerHTML=eval(myResult);
+})
