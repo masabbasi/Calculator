@@ -24,7 +24,7 @@ font-family: 'Roboto', sans-serif;
 .container {
     width: 90%;
     /* height: 100vh; */
-    margin: 100px auto;
+    margin: 0 auto;
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -34,8 +34,8 @@ font-family: 'Roboto', sans-serif;
 
 .calc {
     width: 330px;
-    height: 100vh;
-    margin: 40px auto;
+    height: 90vh;
+    margin: 10px auto 0px;
     border-radius: 0.8rem;
 }
 
@@ -50,11 +50,13 @@ font-family: 'Roboto', sans-serif;
 }
 
 .calc-all-keydown {
+    padding: 10px;
     position: absolute;
     bottom: 50px;
     right: 25px;
     font-size: 1.8rem;
     margin-bottom: 6px;
+    word-break: break-all;
 }
 
 .calc-main-result {

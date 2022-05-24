@@ -65,6 +65,3 @@ document.querySelector(".equals").addEventListener("click",function () {
     const myResult = allKeyResult.innerHTML;
     mainResult.innerHTML=eval(myResult);
 })
-
-const test = "-999";
-console.log();
