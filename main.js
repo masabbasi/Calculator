@@ -47,11 +47,21 @@ allKey.forEach(function(item){
 
 let pOrM = true;
 document.querySelector(".p-or-m").addEventListener("click",function(){
+    
+    if (allKeyResult.innerHTML.slice(0,1)==="+") {
+        allKeyResult.innerHTML.slice(0,1)==="-";
+        return;
+    };
+    if (allKeyResult.innerHTML.slice(0,1)==="-") {
+        allKeyResult.innerHTML.slice(0,1)==="+";
+        return;
+    };
+    
     if (pOrM===false) {
         allKeyResult.innerHTML="+"+allKeyResult.innerHTML;
         pOrM=true;
     } else {
-        allKeyResult.innerHTML="-"+allKeyResult.innerHTML;
+      allKeyResult.innerHTML="-"+allKeyResult.innerHTML;
         pOrM=false;
     }
 })
@@ -65,3 +75,6 @@ document.querySelector(".equals").addEventListener("click",function () {
     const myResult = allKeyResult.innerHTML;
     mainResult.innerHTML=eval(myResult);
 })
+
+const test = "-999";
+console.log();
