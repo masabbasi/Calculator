@@ -72,5 +72,5 @@ document.querySelector(".clear-last").addEventListener("click",function(){
 
 document.querySelector(".equals").addEventListener("click",function () {
     const myResult = allKeyResult.innerHTML;
-    mainResult.innerHTML=eval(myResult);
+    mainResult.innerHTML=eval(myResult).toFixed(2);
 })
