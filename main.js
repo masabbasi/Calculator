@@ -47,18 +47,8 @@ allKey.forEach(function(item){
 
 let pOrM = true;
 document.querySelector(".p-or-m").addEventListener("click",function(){
-    
-    if (allKeyResult.innerHTML.slice(0,1)==="+") {
-        allKeyResult.innerHTML.slice(0,1)==="-";
-        return;
-    };
     if (allKeyResult.innerHTML.slice(0,1)==="-") {
-        allKeyResult.innerHTML.slice(0,1)==="+";
-        return;
-    };
-    
-    if (pOrM===false) {
-        allKeyResult.innerHTML="+"+allKeyResult.innerHTML;
+        allKeyResult.innerHTML=allKeyResult.innerHTML.slice(1);
         pOrM=true;
     } else {
       allKeyResult.innerHTML="-"+allKeyResult.innerHTML;
